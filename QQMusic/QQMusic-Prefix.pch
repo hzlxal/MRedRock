@@ -1,0 +1,27 @@
+//
+//  QQMusic-Prefix.pch
+//  QQMusic
+//
+//  Created by jiaojiao on 5/14/16.
+//  Copyright © 2016 XGZ. All rights reserved.
+//
+
+#ifndef QQMusic_Prefix_pch
+#define QQMusic_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "BaseViewController.h"
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+#define kRGBColor(r,g,b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1.0]
+#define kRGBAColor(r,g,b,a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
+#define kRGBColorWithHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
+#define kRGBAColorWithHex(rgbValue,a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0  blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:(a)]
+
+#define kTimestamp [NSString stringWithFormat:@"%lld",(long long)[[NSDate date] timeIntervalSince1970] * 1000] // 时间戳
+
+#endif /* QQMusic_Prefix_pch */
